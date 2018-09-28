@@ -1,0 +1,14 @@
+{
+  "name": "guard-detect-ddb-2-es",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@yangjs",
+  "license": "ISC",
+  "dependencies": {
+    "moment-timezone": "^0.5.21"
+  }
+}

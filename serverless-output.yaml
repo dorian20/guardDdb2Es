@@ -1,0 +1,45 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  B2GuardDetectTable:
+    Properties:
+      AttributeDefinitions:
+      - AttributeName: id
+        AttributeType: S
+      KeySchema:
+      - AttributeName: id
+        KeyType: HASH
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+      StreamSpecification:
+        StreamViewType: NEW_IMAGE
+      TableName: B2_GUARD_DETECT
+    Type: AWS::DynamoDB::Table
+  GuardDetectDDB2ES:
+    Properties:
+      CodeUri: s3://elltdev.lambda.lotte.net/1a733e84ee9884212390b0f01bb4b0ef
+      Description: ''
+      Environment:
+        Variables:
+          DEBUG_LOG: 'true'
+          ES_ENDPOINT: https://search-es-ltcm-ellt-dev-wwcvewmulz27r3obykatmc2zcy.ap-northeast-2.es.amazonaws.com
+          ES_REGION: ap-northeast-2
+      Events:
+        DynamoDB1:
+          Properties:
+            BatchSize: 100
+            StartingPosition: LATEST
+            Stream:
+              Fn::GetAtt:
+              - B2GuardDetectTable
+              - StreamArn
+          Type: DynamoDB
+      FunctionName: GUARD-DETECT-DDB-2-ES
+      Handler: index.handler
+      MemorySize: 128
+      Role: arn:aws:iam::515303172277:role/LambdaExecute
+      Runtime: nodejs8.10
+      Timeout: 60
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31

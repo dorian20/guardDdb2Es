@@ -1,0 +1,319 @@
+{
+    "Records": [
+        {
+            "eventID": "a5016e464e2a31d47b73b79f6a1fc026",
+            "eventName": "INSERT",
+            "eventVersion": "1.1",
+            "eventSource": "aws:dynamodb",
+            "awsRegion": "ap-northeast-2",
+            "dynamodb": {
+                "ApproximateCreationDateTime": 1530594300,
+                "Keys": {
+                    "id": {
+                        "S": "5db13fb1-8c3b-9040-4aa5-c2626aed2d60"
+                    }
+                },
+                "NewImage": {
+                    "detail-type": {
+                        "S": "GuardDuty Finding"
+                    },
+                    "resources": {
+                        "L": []
+                    },
+                    "detail": {
+                        "M": {
+                            "severity": {
+                                "N": "2"
+                            },
+                            "schemaVersion": {
+                                "S": "2.0"
+                            },
+                            "resource": {
+                                "M": {
+                                    "instanceDetails": {
+                                        "M": {
+                                            "launchTime": {
+                                                "S": "2018-06-05T06:03:19Z"
+                                            },
+                                            "instanceId": {
+                                                "S": "i-0b12e72dd027d6cd3"
+                                            },
+                                            "networkInterfaces": {
+                                                "L": [
+                                                    {
+                                                        "M": {
+                                                            "networkInterfaceId": {
+                                                                "S": "eni-185c3a46"
+                                                            },
+                                                            "privateIpAddresses": {
+                                                                "L": [
+                                                                    {
+                                                                        "M": {
+                                                                            "privateDnsName": {
+                                                                                "NULL": true
+                                                                            },
+                                                                            "privateIpAddress": {
+                                                                                "S": "10.125.232.210"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "subnetId": {
+                                                                "S": "subnet-0d41d365"
+                                                            },
+                                                            "vpcId": {
+                                                                "S": "vpc-184df470"
+                                                            },
+                                                            "privateDnsName": {
+                                                                "NULL": true
+                                                            },
+                                                            "securityGroups": {
+                                                                "L": [
+                                                                    {
+                                                                        "M": {
+                                                                            "groupName": {
+                                                                                "S": "NEW-ELLT-DEV-ETC-PUBLISH-PUB-SG"
+                                                                            },
+                                                                            "groupId": {
+                                                                                "S": "sg-5cd95336"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "publicIp": {
+                                                                "S": "52.78.152.232"
+                                                            },
+                                                            "ipv6Addresses": {
+                                                                "L": []
+                                                            },
+                                                            "publicDnsName": {
+                                                                "NULL": true
+                                                            },
+                                                            "privateIpAddress": {
+                                                                "S": "10.125.232.210"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            "instanceState": {
+                                                "S": "running"
+                                            },
+                                            "imageId": {
+                                                "S": "ami-5002a13e"
+                                            },
+                                            "instanceType": {
+                                                "S": "t2.micro"
+                                            },
+                                            "imageDescription": {
+                                                "S": "NEW-ELLT-DEV-COMMON-HUB-PUB-A-20180201"
+                                            },
+                                            "productCodes": {
+                                                "L": []
+                                            },
+                                            "iamInstanceProfile": {
+                                                "NULL": true
+                                            },
+                                            "availabilityZone": {
+                                                "S": "ap-northeast-2a"
+                                            },
+                                            "platform": {
+                                                "NULL": true
+                                            },
+                                            "tags": {
+                                                "L": [
+                                                    {
+                                                        "M": {
+                                                            "value": {
+                                                                "S": "NEW-ELLT-DEV-ETC-PUBLISH-PUB-A"
+                                                            },
+                                                            "key": {
+                                                                "S": "Name"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "resourceType": {
+                                        "S": "Instance"
+                                    }
+                                }
+                            },
+                            "description": {
+                                "S": "111.7.177.239 is performing SSH brute force attacks against i-0b12e72dd027d6cd3. Brute force attacks are used to gain unauthorized access to your instance by guessing the SSH password."
+                            },
+                            "type": {
+                                "S": "UnauthorizedAccess:EC2/SSHBruteForce"
+                            },
+                            "title": {
+                                "S": "111.7.177.239 is performing SSH brute force attacks against i-0b12e72dd027d6cd3. "
+                            },
+                            "accountId": {
+                                "S": "515303172277"
+                            },
+                            "createdAt": {
+                                "S": "2018-07-02T16:57:18.285Z"
+                            },
+                            "partition": {
+                                "S": "aws"
+                            },
+                            "service": {
+                                "M": {
+                                    "archived": {
+                                        "BOOL": false
+                                    },
+                                    "resourceRole": {
+                                        "S": "TARGET"
+                                    },
+                                    "detectorId": {
+                                        "S": "30b21fe8b21b35c7b14d3b33f71d6a18"
+                                    },
+                                    "eventFirstSeen": {
+                                        "S": "2018-07-02T16:46:03Z"
+                                    },
+                                    "eventLastSeen": {
+                                        "S": "2018-07-02T16:56:02Z"
+                                    },
+                                    "additionalInfo": {
+                                        "M": {}
+                                    },
+                                    "count": {
+                                        "N": "1"
+                                    },
+                                    "action": {
+                                        "M": {
+                                            "actionType": {
+                                                "S": "NETWORK_CONNECTION"
+                                            },
+                                            "networkConnectionAction": {
+                                                "M": {
+                                                    "protocol": {
+                                                        "S": "TCP"
+                                                    },
+                                                    "blocked": {
+                                                        "BOOL": false
+                                                    },
+                                                    "connectionDirection": {
+                                                        "S": "INBOUND"
+                                                    },
+                                                    "localPortDetails": {
+                                                        "M": {
+                                                            "port": {
+                                                                "N": "22"
+                                                            },
+                                                            "portName": {
+                                                                "S": "SSH"
+                                                            }
+                                                        }
+                                                    },
+                                                    "remotePortDetails": {
+                                                        "M": {
+                                                            "port": {
+                                                                "N": "32926"
+                                                            },
+                                                            "portName": {
+                                                                "S": "Unknown"
+                                                            }
+                                                        }
+                                                    },
+                                                    "remoteIpDetails": {
+                                                        "M": {
+                                                            "country": {
+                                                                "M": {
+                                                                    "countryName": {
+                                                                        "S": "China"
+                                                                    }
+                                                                }
+                                                            },
+                                                            "city": {
+                                                                "M": {
+                                                                    "cityName": {
+                                                                        "S": "Zhengzhou"
+                                                                    }
+                                                                }
+                                                            },
+                                                            "geoLocation": {
+                                                                "M": {
+                                                                    "lon": {
+                                                                        "N": "113.5325"
+                                                                    },
+                                                                    "lat": {
+                                                                        "N": "34.6836"
+                                                                    }
+                                                                }
+                                                            },
+                                                            "organization": {
+                                                                "M": {
+                                                                    "asnOrg": {
+                                                                        "S": "Henan Mobile Communications Co.,Ltd"
+                                                                    },
+                                                                    "org": {
+                                                                        "S": "Henan Mobile Communications Co.,Ltd"
+                                                                    },
+                                                                    "isp": {
+                                                                        "S": "China Mobile Guangdong"
+                                                                    },
+                                                                    "asn": {
+                                                                        "S": "24445"
+                                                                    }
+                                                                }
+                                                            },
+                                                            "ipAddressV4": {
+                                                                "S": "111.7.177.239"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "serviceName": {
+                                        "S": "guardduty"
+                                    }
+                                }
+                            },
+                            "id": {
+                                "S": "70b22df6ab66c5e64da69f32139a1381"
+                            },
+                            "region": {
+                                "S": "ap-northeast-2"
+                            },
+                            "arn": {
+                                "S": "arn:aws:guardduty:ap-northeast-2:515303172277:detector/30b21fe8b21b35c7b14d3b33f71d6a18/finding/70b22df6ab66c5e64da69f32139a1381"
+                            },
+                            "updatedAt": {
+                                "S": "2018-07-02T16:57:18.285Z"
+                            }
+                        }
+                    },
+                    "id": {
+                        "S": "5db13fb1-8c3b-9040-4aa5-c2626aed2d60"
+                    },
+                    "source": {
+                        "S": "aws.guardduty"
+                    },
+                    "time": {
+                        "S": "2018-07-02T17:00:00Z"
+                    },
+                    "region": {
+                        "S": "ap-northeast-2"
+                    },
+                    "version": {
+                        "S": "0"
+                    },
+                    "account": {
+                        "S": "515303172277"
+                    }
+                },
+                "SequenceNumber": "4685700000000000057859671",
+                "SizeBytes": 2236,
+                "StreamViewType": "NEW_IMAGE"
+            },
+            "eventSourceARN": "arn:aws:dynamodb:ap-northeast-2:515303172277:table/B2_GUARD/stream/2018-07-02T04:51:58.966"
+        }
+    ]
+}
